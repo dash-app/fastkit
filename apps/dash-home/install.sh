@@ -18,6 +18,7 @@ echo ":: Download archives..."
 cd $_target/pack
 wget https://github.com/dash-app/dash-home/releases/latest/download/dash-home_linux_armv6.tar.gz
 tar -xvzf ./dash-home_linux_armv6.tar.gz
+rm -rfv dash-home_linux_armv6.tar.gz
 
 echo ":: Activating systemd..."
 cp -Rpfv ${_base}/template/systemd/dash-home.service /etc/systemd/system/
