@@ -1,0 +1,13 @@
+[Unit]
+Description=Dash-App Home Service
+After=network.target pigent.service
+
+[Service]
+Type=simple
+Restart=on-failure
+WorkingDirectory=/opt/dash-app/dash-home
+EnvironmentFile=/opt/dash-app/dash-home/env
+ExecStart=bash /opt/dash-app/dash-home/start.sh
+
+[Install]
+WantedBy=multi-user.target

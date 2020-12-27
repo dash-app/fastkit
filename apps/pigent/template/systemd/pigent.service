@@ -1,0 +1,12 @@
+[Unit]
+Description=Raspberry Pi Agent
+After=network.target pigpiod.service
+
+[Service]
+Type=simple
+Restart=on-failure
+EnvironmentFile=/opt/dash-app/pigent/env
+ExecStart=python3 /opt/dash-app/pigent/src/pigent/pigent.py
+
+[Install]
+WantedBy=multi-user.target
