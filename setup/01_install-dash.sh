@@ -15,7 +15,3 @@ bash $_base/../apps/pigent/install.sh
 
 # Install Dash-Home
 bash $_base/../apps/dash-home/install.sh
-
-# Start services....
-systemctl start pigent
-systemctl start dash-home
