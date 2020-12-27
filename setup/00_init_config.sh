@@ -14,6 +14,7 @@ fi
 
 raspi-config nonint do_i2c 0
 raspi-config nonint do_hostname $_serial.d45h.local
+hostnamectl set-hostname $_serial.d45h.local
 raspi-config nonint do_change_timezone UTC
 raspi-config nonint do_change_locale en_US.UTF-8
 raspi-config nonint do_expand_rootfs
