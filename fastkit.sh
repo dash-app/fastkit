@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+cd "$(dirname "$0")"
 
 if [ "$UID" != "0" ]; then
     echo "E: Must be root."
