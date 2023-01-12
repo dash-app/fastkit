@@ -13,5 +13,12 @@ apt-get update
 apt-get install -y busybox git python3-pip pigpio i2c-tools
 busybox --install
 
-# Enable pigpiod
+# pigpiod
+
+# Disable sampling
+sed -ie 's/pigpiod\ -l/pigpiod -m -l/g' /usr/lib/systemd/system/pigpiod.service
+
+systemctl daemon-reload
+
+# Start pigpiod (with autostart)
 systemctl enable --now pigpiod
